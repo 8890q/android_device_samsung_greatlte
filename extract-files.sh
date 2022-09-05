@@ -76,4 +76,8 @@ patch_firmware $BLOB_ROOT/vendor/firmware/fimc_is_rta_2l2_imx320.bin
 patch_firmware $BLOB_ROOT/vendor/firmware/fimc_is_rta_imx333_3h1.bin
 patch_firmware $BLOB_ROOT/vendor/firmware/fimc_is_rta_imx333_imx320.bin
 
+# Fix camera on Note 8
+"${PATCHELF}" --add-needed libprocessgroup.so $BLOB_ROOT/lib/hw/camera.vendor.universal8895.so
+"${PATCHELF}" --add-needed libprocessgroup.so $BLOB_ROOT/lib64/hw/camera.vendor.universal8895.so
+
 "${MY_DIR}/setup-makefiles.sh"
