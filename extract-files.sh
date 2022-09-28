@@ -80,4 +80,7 @@ patch_firmware $BLOB_ROOT/vendor/firmware/fimc_is_rta_imx333_imx320.bin
 "${PATCHELF}" --add-needed libprocessgroup.so $BLOB_ROOT/lib/hw/camera.vendor.universal8895.so
 "${PATCHELF}" --add-needed libprocessgroup.so $BLOB_ROOT/lib64/hw/camera.vendor.universal8895.so
 
+"${PATCHELF}" --add-needed libprocessgroup.so $BLOB_ROOT/lib/libhifills_interface.so
+"${PATCHELF}" --add-needed libprocessgroup.so $BLOB_ROOT/lib64/libhifills_interface.so
+
 "${MY_DIR}/setup-makefiles.sh"
